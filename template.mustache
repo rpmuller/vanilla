@@ -9,22 +9,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
 </head>
 <body>
   <div class="container">
   <h3>{{Name}}</h3>
-    <img src="profile.jpg" alt="Rick Muller Image" class="rounded-circle" style="width: 200px; height: 200px;">
+    <img src="profile.jpg" alt="Rick Muller Image" width=200 height=200>
     <p>{{PageSummary}}</p>
 
-    <h4>Contact me:</h4>
+    <h4>Contact:</h4>
         <ul>
             <li><a href="https://rmuller.net">rmuller.net</a></li>
             <li><a href="https://scholar.google.com/citations?user=ihGf4wgAAAAJ">Google Scholar (h-index 34)</a></li>
             <li><a href="https://in.linkedin.com/in/rick-muller-62082a">LinkedIn</a></li>
-            <li><a href="http://github.com/rpmuller">GitHub @rpmuller</a>
-            <li><a href="http://twitter.com/rpmuller">Twitter @rpmuller</a>
+            <li><a href="http://github.com/rpmuller">GitHub</a>
+            <li><a href="http://twitter.com/rpmuller">Twitter</a>
         </ul>
 
   <h3>Experience</h3>
@@ -40,36 +40,37 @@
     {{#Schools}}
     <h4>{{Name}}</h4>
     <p>{{Degree}} {{Summary}}</p>
+    {{/Schools}}
     
   <h3>Selected Publications</h3>
     <p>{{NPubs}} total publications; h-index {{HIndex}}.</p>
       <h4>Quantum Information Science</h4>
         <ul>
-          {{#QuantumPublications}}
+          {{#QuantumPapers}}
           <li>
             <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
-            <a href="https://arxiv.org/abs/{{ArXiv}}">arXiv:{{ArXiv}}</a>
+            {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
           </li>
-          {{/QuantumPublications}}
+          {{/QuantumPapers}}
         </ul>
       <h4>Computing and Theory</h4>
         <ul>
-            {{#TheoryPublications}}
+            {{#TheoryPapers}}
             <li>
               <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
-              <a href="https://arxiv.org/abs/{{ArXiv}}">arXiv:{{ArXiv}}</a>
+              {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
             </li>
-            {{/TheoryPublications}}
+            {{/TheoryPapers}}
           </ul>
 
       <h4>Materials, Chemistry, Energy</h4>
         <ul>
-            {{#MaterialsPublications}}
+            {{#MaterialsPapers}}
             <li>
               <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
-              <a href="https://arxiv.org/abs/{{ArXiv}}">arXiv:{{ArXiv}}</a>
+              {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
             </li>
-            {{/MaterialsPublications}}
+            {{/MaterialsPapers}}
           </ul>
 
   </div>
