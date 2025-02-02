@@ -1,0 +1,22 @@
+version = 1
+requires-python = ">=3.13"
+
+[[package]]
+name = "pystache"
+version = "0.6.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e3/e3/62df01d808819e28d7bd3a560e06c69dc31db60a9cd1ea03531d392d810c/pystache-0.6.7.tar.gz", hash = "sha256:55d8bb5aac450389369584b1627cecbe9069e13a09471a8fe783c44b64e94d5a", size = 101395 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/10/45/a0d78b1761824f808b3dfbf8ec5f4a27bba406cc4200701adde311cbbde5/pystache-0.6.7-py3-none-any.whl", hash = "sha256:08562f53b3afd9b55c1eb1d4980f4ced68e07dbed3aceffda8bb600286b93f76", size = 81623 },
+]
+
+[[package]]
+name = "vanilla"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pystache" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pystache", specifier = ">=0.6.7" }]
