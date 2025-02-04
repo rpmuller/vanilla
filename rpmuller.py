@@ -61,7 +61,7 @@ Schools = [
 
 QuantumPapers = [
     {"Title": "Impact of Incorporation Kinetics on Device Fabrication with Atomic Precision",
-     "Authors": "Xujiao Gao, Erik Nielsen, Andrew Baczewski, Jonathan E. Moussa, John K. Gamble, Andrew G. Salinger, and Richard P. Muller",
+     "Authors": "Jeffrey A. Ivie, Quinn Campbell, Justin C. Koepke, Mitchell I. Brickson, Peter A. Schultz, Richard P. Muller, Andrew M. Mounce, Daniel R. Ward, Malcom S. Carroll, Ezra Bussmann, Andrew D. Baczewski, Shashank Misra",
      "Reference": "Phys. Rev. Applied 16, 054037 (2021)",
      "URL": "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.16.054037",
      "Arxiv": "2105.12074",
