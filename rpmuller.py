@@ -158,9 +158,5 @@ MaterialsPapers = [
     },
 ]
 
-output_fname = "rpmuller.html"
-template_fname = "template.mustache"
-
-template = open(template_fname).read()
-output = render(template, locals())
-open(output_fname, "w").write(output)
+open("rpmuller.html", "w").write(render(open("template.mustache").read(), locals()))
+open("rpmuller.sidebar.html", "w").write(render(open("template.sidebar.mustache").read(), locals()))
