@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>{{PageTitle}}</title>
+  <meta name="description" content="{{PageTitle}}">
+  <meta name="author" content="{{Name}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container w-75">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-transparent" id="sidebarMenu">
+      <a class="navbar-brand" href="#">Rick Muller</a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Publications">Publications</a></li>
+      </ul>
+    </nav>
+<section id="About">
+    
+  <div class="row mt-5">
+    <div class="col-3">
+<img src="profile.jpg" class="rounded-circle" alt="Rick Muller Image" width=200 height=200>
+
+</div>
+<div class="col">
+
+  <h3 class="display-4">{{Name}}</h3>
+    <p>{{PageSummary}}</p>
+    <div class="social-icons">
+      <a class="social-icon" href="https://rmuller.net"><i class="fa fa-home"></i></a>
+      <a class="social-icon" href="https://scholar.google.com/citations?user=ihGf4wgAAAAJ"><i class="fas fa-graduation-cap"></i></a>
+      <a class="social-icon" href="https://in.linkedin.com/in/rick-muller-62082a"><i class="fab fa-linkedin-in"></i></a>
+      <a class="social-icon" href="http://github.com/rpmuller"><i class="fab fa-github"></i></a>
+      <a class="social-icon" href="http://twitter.com/rpmuller"><i class="fab fa-twitter"></i></a>
+    </div>
+  
+        </div>
+      </div> 
+  </section>
+
+<section id="Experience">
+  <h3 class="display-5 mt-5">Experience</h3>
+    {{#Jobs}}
+    <h4>{{Company}}</h4>
+      {{#Positions}}
+      <!-- <p class="text-muted float-right">{{Span}}</p>
+      <h5 class="text-muted">{{Title}}, </h5> -->
+      <h5 class="text-muted">{{Title}}, {{Span}}</h5>
+      {{/Positions}}
+      <p>{{Summary}}</p>
+    {{/Jobs}}
+</section>  
+
+<section id="Education">
+    <h3 class="display-5 mt-5">Education</h3>
+    {{#Schools}}
+    <h4>{{Name}}</h4>
+    <p>{{Degree}} {{Summary}}</p>
+    {{/Schools}}
+</section>
+
+<section id="Publications">
+  <h3 class="display-5 mt-5">Selected Publications</h3>
+    <p>{{NPubs}} total publications; h-index {{HIndex}}.</p>
+      <h4>Quantum Information Science</h4>
+        <ul>
+          {{#QuantumPapers}}
+          <li>
+            <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
+            {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
+          </li>
+          {{/QuantumPapers}}
+        </ul>
+      <h4>Computing and Theory</h4>
+        <ul>
+            {{#TheoryPapers}}
+            <li>
+              <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
+              {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
+            </li>
+            {{/TheoryPapers}}
+          </ul>
+
+      <h4>Materials, Chemistry, Energy</h4>
+        <ul>
+            {{#MaterialsPapers}}
+            <li>
+              <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
+              {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
+            </li>
+            {{/MaterialsPapers}}
+          </ul>
+</section>
+  </div>
+
+</body>
+</html>
