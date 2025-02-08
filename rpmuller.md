@@ -1,5 +1,5 @@
 
-### Rick Muller
+# Rick Muller
 High impact leadership in quantum information science, artificial intelligence, and advanced computing for national security.
 
 #### Contact:
