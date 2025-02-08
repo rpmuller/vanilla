@@ -3,9 +3,7 @@ from pystache import render
 Name = "Rick Muller"
 PageTitle = Name + " Resume"
 PageSummary = """\
-Director of the Intelligence Advance Research Projects Activity,
-where we develop high-risk, high-payoff capabilities for the US Intelligence
-Community."""
+High impact leadership in quantum information science, artificial intelligence, and advanced computing for national security."""
 
 NPubs = 74
 HIndex = 34
@@ -24,27 +22,27 @@ Jobs = [
     {"Company": "Quantum Systems Accelerator (QSA)",
         "Positions": [{"Title": "Director", "Span": "2022-2024"},
             {"Title": "Deputy Director", "Span": "2020-2022"}],
-        "Summary": "The Quantum Systems Accelerator is one of five DOE National Quantum Initiative Science Research Centers that aims to catalyze national leadership in quantum information science to co-design the algorithms, quantum devices, and engineering solutions needed to deliver certified quantum advantage in Department of Energy scientific applications. The center a partnership between Lawrence Berkeley National Laboratory and Sandia National Laboratories."
+        "Summary": "Led the Quantum Systems Accelerator, one of five DOE National Quantum Initiative Science Research Centers, to catalyze national leadership in quantum information science to co-design the algorithms, quantum devices, and engineering solutions needed to deliver certified quantum advantage in Department of Energy scientific applications."
     },
     {"Company": "Sandia National Laboratories",
         "Positions": [{"Title": "Senior Manager, Quantum and Advanced Microsystems Group", "Span": "2019-2024"},
             {"Title": "Program Manager, Quantum Information Sciences", "Span": "2018"},
             {"Title": "Manager, Computational Materials Science", "Span": "2017-2018"}],
-        "Summary": "Led the quantum information science program at Sandia where we worked with a number of government agencies to develop quantum research centers and demonstration testbeds."
+        "Summary": "Led the Quantum Information Science program at Sandia to develop quantum technologies, testbeds, and centers for national security."
     },
     {"Company": "National Strategic Computing Initiative",
         "Positions": [{"Title": "Senior Staff, Joint Program Office", "Span": "2016-2017"}],
-        "Summary": "The Joint Program Office coordinated USG work on the NSCI with DOD, DOE, NSF, OSTP, OMB, NIST, IARPA. Led workshops exploring impact of foreign HPC on national and economic security, and initiated programs developing novel hardware and software paradigms for heterogeneous computing."
+        "Summary": "Led the NSCI Joint Program Office and coordinated USG work with DOD, DOE, NSF, OSTP, OMB, NIST, IARPA. Led workshops exploring impact of foreign HPC on national and economic security, and initiated programs developing novel hardware and software paradigms for heterogeneous computing."
     },
     {"Company": "Sandia National Laboratories",
         "Positions": [{"Title": "Distinguished Member of the Technical Staff", "Span": "2016-2017"},
             {"Title": "Principal Member of the Technical Staff", "Span": "2007-2015"},
             {"Title": "Senior Member of the Technical Staff", "Span": "2003-2007"}],
-        "Summary": "Deputy director of Sandia Science and Engineering of Quantum Information Sciences Research Challenge. Deputy Project Lead and Modeling Lead, Quantum Information Science and Technology, developing Silicon donor and dot qubits. PI for development of QCAD simulation tool for nano- and quantum electronic devices. Sandia representative for quantum computing road mapping with DOE/ASCR, DOE/ASC and DOE/Materials. Modeling Team Lead, QIST GC-LDRD project developing semiconductor qubits."
+        "Summary": "Deputy director of Sandia Science and Engineering of Quantum Information Sciences Research Challenge. Deputy Project Lead and Modeling Lead, Quantum Information Science and Technology, developing silicon donor and dot qubits. PI for development of QCAD simulation tool for nano- and quantum electronic devices."
     },
     {"Company": "California Institute of Technology",
         "Positions": [{"Title": "Director, Quantum Simulations Technology", "Span": "1997-2003"}],
-        "Summary": "Directed the Quantum Simulations Technology group at the Caltech Materials and Process Simulation Center, focusing on developing new methods for quantum simulations and quantum computing."
+        "Summary": "Directed the Quantum Simulations Technology group at the Caltech Materials and Process Simulation Center, focusing on developing new methods for quantum simulations and multiscale modeling."
     },
     {"Company": "University of Southern California",
         "Positions": [{"Title": "Postdoctoral Research Associate", "Span": "1994-1997"}],
@@ -158,5 +156,8 @@ MaterialsPapers = [
     },
 ]
 
-open("rpmuller.html", "w").write(render(open("template.mustache").read(), locals()))
-open("rpmuller.sidebar.html", "w").write(render(open("template.sidebar.mustache").read(), locals()))
+for template in ["template.mustache", 
+                 "template.sidebar.mustache",
+                 "template.right.sidebar.mustache"]:
+    fname = template.replace("template", "rpmuller").replace(".mustache", ".html")
+    open(fname, "w").write(render(open(template).read(),locals()))
