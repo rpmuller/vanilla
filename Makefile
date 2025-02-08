@@ -1,6 +1,6 @@
 all: build install
 
-build: rpmuller.py template.mustache template.sidebar.mustache template.right.sidebar.mustache
+build: rpmuller.py template.html template.sidebar.html template.right.sidebar.html
 	uv run rpmuller.py
 
 install:

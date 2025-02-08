@@ -156,8 +156,10 @@ MaterialsPapers = [
     },
 ]
 
-for template in ["template.mustache", 
-                 "template.sidebar.mustache",
-                 "template.right.sidebar.mustache"]:
-    fname = template.replace("template", "rpmuller").replace(".mustache", ".html")
+for template in ["template.html", 
+                 "template.sidebar.html",
+                 "template.right.sidebar.html",
+                 "template.md"
+                 ]:
+    fname = template.replace("template", "rpmuller")
     open(fname, "w").write(render(open(template).read(),locals()))
