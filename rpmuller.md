@@ -11,8 +11,12 @@ High impact leadership in quantum information science, artificial intelligence, 
 
       
 ### Experience
+#### IonQ
+  - VP, Quantum Computing Systems, 2025-Present
+
+_Leading the development of IonQ&#x27;s next generation quantum computing systems to deliver the world&#x27;s most powerful quantum computers for commercial applications._
 #### Intelligence Advanced Research Projects Activity (IARPA)
-  - Director, 2024-Present
+  - Director, 2024-2025
 
 _Directs a large research portfolio in artificial intelligence, quantum information science, biometrics, image, text, and video recognition and processing, and related technologies to give the US Intelligence Community an overwhelming information advantage._
 #### Quantum Systems Accelerator (QSA)
