@@ -12,9 +12,10 @@ High impact leadership in quantum information science, artificial intelligence, 
       
 ### Experience
 #### IonQ
-  - VP, Quantum Computing Systems, 2025-Present
+  - SVP, Federal Technical Lead, 2025-Present
+  - VP, Quantum Computing Systems, 2025
 
-_Leading the development of IonQ&#x27;s next generation quantum computing systems to deliver the world&#x27;s most powerful quantum computers for commercial applications._
+_Developing IonQ&#x27;s next generation quantum systems to address the world&#x27;s hardest problems._
 #### Intelligence Advanced Research Projects Activity (IARPA)
   - Director, 2024-2025
 

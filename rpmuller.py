@@ -17,8 +17,10 @@ TwitterURL = "http://twitter.com/rpmuller"
 Jobs = [
     {
         "Company": "IonQ",
-        "Positions": [{"Title": "VP, Quantum Computing Systems", "Span": "2025-Present"}],
-        "Summary": "Leading the development of IonQ's next generation quantum computing systems to deliver the world's most powerful quantum computers for commercial applications."
+        "Positions": [
+            {"Title": "SVP, Federal Technical Lead", "Span": "2025-Present"},
+            {"Title": "VP, Quantum Computing Systems", "Span": "2025"}],
+        "Summary": "Developing IonQ's next generation quantum systems to address the world's hardest problems."
     },
     {"Company": "Intelligence Advanced Research Projects Activity (IARPA)",
         "Positions": [{"Title": "Director", "Span": "2024-2025"}],
