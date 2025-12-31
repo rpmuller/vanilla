@@ -24,7 +24,7 @@ Jobs = [
     },
     {"Company": "Intelligence Advanced Research Projects Activity (IARPA)",
         "Positions": [{"Title": "Director", "Span": "2024-2025"}],
-        "Summary": "Directs a large research portfolio in artificial intelligence, quantum information science, biometrics, image, text, and video recognition and processing, and related technologies to give the US Intelligence Community an overwhelming information advantage."
+        "Summary": "Directed IARPA's research portfolio in artificial intelligence, quantum information science, biometrics, image, text, and video recognition and processing, and related technologies to give the US Intelligence Community an overwhelming information advantage."
     },
     {"Company": "Quantum Systems Accelerator (QSA)",
         "Positions": [{"Title": "Director", "Span": "2022-2024"},

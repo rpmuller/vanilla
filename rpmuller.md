@@ -19,7 +19,7 @@ _Developing IonQ&#x27;s next generation quantum systems to address the world&#x2
 #### Intelligence Advanced Research Projects Activity (IARPA)
   - Director, 2024-2025
 
-_Directs a large research portfolio in artificial intelligence, quantum information science, biometrics, image, text, and video recognition and processing, and related technologies to give the US Intelligence Community an overwhelming information advantage._
+_Directed IARPA&#x27;s research portfolio in artificial intelligence, quantum information science, biometrics, image, text, and video recognition and processing, and related technologies to give the US Intelligence Community an overwhelming information advantage._
 #### Quantum Systems Accelerator (QSA)
   - Director, 2022-2024
   - Deputy Director, 2020-2022
