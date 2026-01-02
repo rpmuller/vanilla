@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size:0.8em">
+<html lang="en" style="font-size: 0.9em">
 <head>
 
   <meta charset="utf-8">
@@ -9,77 +9,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
   <div class="container">
     <div class="row">
-        <div class="col-3 position-fixed" id="sticky-sidebar">
- 
-            
-<section id="About">
-    
-    <img src="profile.jpg" class="rounded-circle" alt="Rick Muller Image" width=200 height=200>
-   
-    <h3 class="display-4">{{Name}}</h3>
-    <p>{{PageSummary}}</p>
-    
-    <ul class="navbar-nav">
-        <!-- <li><a href="#About">About</a></li> -->
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#Education">Education</a></li>
-        <li><a href="#Publications">Publications</a></li>
-      </ul>
+      <div class="col-3 position-fixed" id="sticky-sidebar">
 
-    <p> </p>
-    <div class="social-icons">
-        <a class="social-icon" href="https://rmuller.net"><i class="fa fa-home"></i></a>
-        <a class="social-icon" href="https://scholar.google.com/citations?user=ihGf4wgAAAAJ"><i class="fas fa-graduation-cap"></i></a>
-        <a class="social-icon" href="https://in.linkedin.com/in/rick-muller-62082a"><i class="fab fa-linkedin-in"></i></a>
-        <a class="social-icon" href="http://github.com/rpmuller"><i class="fab fa-github"></i></a>
-        <a class="social-icon" href="http://twitter.com/rpmuller"><i class="fab fa-twitter"></i></a>
-    </div>
-    
-</section>
- 
-</div>
-<div class="col-8 offset-4" id="main">
+        <section id="About">
+          <img src="profile.jpg" class="rounded-circle img-fluid" alt="{{Name}} Image" width=200 height=200>
 
-<section id="Experience">
-  <h3 class="display-5 mt-5">Experience</h3>
-    {{#Jobs}}
-    <h4>{{Company}}</h4>
-      {{#Positions}}
-      <!-- <p class="text-muted float-right">{{Span}}</p>
-      <h5 class="text-muted">{{Title}}, </h5> -->
-      <h5 class="text-muted">{{Title}}, {{Span}}</h5>
-      {{/Positions}}
-      <p>{{Summary}}</p>
-    {{/Jobs}}
-</section>  
+          <h3 class="display-4">{{Name}}</h3>
+          <p>{{PageSummary}}</p>
 
-<section id="Education">
-    <h3 class="display-5 mt-5">Education</h3>
-    {{#Schools}}
-    <h4>{{Name}}</h4>
-    <p>{{Degree}} {{Summary}}</p>
-    {{/Schools}}
-</section>
+          <ul class="navbar-nav">
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Publications">Publications</a></li>
+          </ul>
 
-<section id="Publications">
-  <h3 class="display-5 mt-5">Selected Publications</h3>
-    <p>{{NPubs}} total publications; h-index {{HIndex}}.</p>
-      <h4>Quantum Information Science</h4>
-        <ul>
-          {{#QuantumPapers}}
-          <li>
-            <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
-            {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
-          </li>
-          {{/QuantumPapers}}
-        </ul>
-      <h4>Computing and Theory</h4>
-        <ul>
+          <div class="social-icons mt-3">
+            <a class="social-icon me-2" href="{{HomeURL}}"><i class="fa fa-home"></i></a>
+            <a class="social-icon me-2" href="{{ScholarURL}}"><i class="fas fa-graduation-cap"></i></a>
+            <a class="social-icon me-2" href="{{LinkedInURL}}"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon me-2" href="{{GithubURL}}"><i class="fab fa-github"></i></a>
+            <a class="social-icon" href="{{TwitterURL}}"><i class="fab fa-twitter"></i></a>
+          </div>
+        </section>
+
+      </div>
+      <div class="col-8 offset-4" id="main">
+
+        <section id="Experience">
+          <h3 class="display-5 mt-5">Experience</h3>
+          {{#Jobs}}
+          <h4>{{Company}}</h4>
+            {{#Positions}}
+            <h5 class="text-muted">{{Title}}, {{Span}}</h5>
+            {{/Positions}}
+            <p>{{Summary}}</p>
+          {{/Jobs}}
+        </section>
+
+        <section id="Education">
+          <h3 class="display-5 mt-5">Education</h3>
+          {{#Schools}}
+          <h4>{{Name}}</h4>
+          <p>{{Degree}} {{Summary}}</p>
+          {{/Schools}}
+        </section>
+
+        <section id="Publications">
+          <h3 class="display-5 mt-5">Selected Publications</h3>
+          <p>{{NPubs}} total publications; h-index {{HIndex}}.</p>
+          <h4>Quantum Information Science</h4>
+          <ul>
+            {{#QuantumPapers}}
+            <li>
+              <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
+              {{#Arxiv}}<a href="https://arxiv.org/abs/{{Arxiv}}">arXiv:{{Arxiv}}</a>{{/Arxiv}}
+            </li>
+            {{/QuantumPapers}}
+          </ul>
+          <h4>Computing and Theory</h4>
+          <ul>
             {{#TheoryPapers}}
             <li>
               <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
@@ -87,9 +80,8 @@
             </li>
             {{/TheoryPapers}}
           </ul>
-
-      <h4>Materials, Chemistry, Energy</h4>
-        <ul>
+          <h4>Materials, Chemistry, Energy</h4>
+          <ul>
             {{#MaterialsPapers}}
             <li>
               <a href="{{URL}}">{{Title}}</a>. {{Authors}}. {{Reference}}.
@@ -97,11 +89,10 @@
             </li>
             {{/MaterialsPapers}}
           </ul>
-</section>
+        </section>
 
-</div>
-</div>
-</div>
+      </div>
+    </div>
   </div>
 
 </body>

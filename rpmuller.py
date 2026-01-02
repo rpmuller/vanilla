@@ -8,7 +8,7 @@ High impact leadership in quantum information science, artificial intelligence, 
 NPubs = 74
 HIndex = 34
 HomeURL = "https://rmuller.net"
-ScholarURL = "https://scholar.google.com/citations?user=8ZJY9G4AAAAJ&hl=en"
+ScholarURL = "https://scholar.google.com/citations?user=ihGf4wgAAAAJ"
 LinkedInURL = "https://in.linkedin.com/in/rick-muller-62082a"
 GithubURL = "http://github.com/rpmuller"
 TwitterURL = "http://twitter.com/rpmuller"
@@ -106,7 +106,7 @@ QuantumPapers = [
 TheoryPapers = [
     {"Title": "SymPy: Symbolic Computing in Python",
      "Authors": "Aaron Meurer et al.",
-     "Reference": "PeerJ Computer Science 3:e103 (2017}",
+     "Reference": "PeerJ Computer Science 3:e103 (2017)",
      "URL": "https://peerj.com/articles/cs-103/",
      "Arxiv": "1502.05589",
     },
@@ -163,10 +163,13 @@ MaterialsPapers = [
     },
 ]
 
-for template in ["template.html", 
+for template in ["template.html",
                  "template.sidebar.html",
                  "template.right.sidebar.html",
                  "template.md"
                  ]:
     fname = template.replace("template", "rpmuller")
-    open(fname, "w").write(render(open(template).read(),locals()))
+    with open(template) as f:
+        content = render(f.read(), locals())
+    with open(fname, "w") as f:
+        f.write(content)

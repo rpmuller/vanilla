@@ -76,7 +76,7 @@ Visiting Scholar, Chemistry, 1984-1985
 - [Coherent Electron Transport by Adiabatic Passage in an Imperfect Donor Chain](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.82.155315). Rajib Rahman, Richard P. Muller, James E. Levy, Malcolm S. Carroll, Gerhard Klimeck, Andrew D. Greentree, Lloyd C. L. Hollenberg. Physical Review B, 82, 155315 (2010). [arXiv:1008.1494](1008.1494)
 
 #### Computing and Theory
-- [SymPy: Symbolic Computing in Python](https://peerj.com/articles/cs-103/). Aaron Meurer et al.. PeerJ Computer Science 3:e103 (2017}. [arXiv:1502.05589](1502.05589)
+- [SymPy: Symbolic Computing in Python](https://peerj.com/articles/cs-103/). Aaron Meurer et al.. PeerJ Computer Science 3:e103 (2017). [arXiv:1502.05589](1502.05589)
 - [U.S. Leadership in High Performance Computing](https://www.nitrd.gov/nitrdgroups/images/b/b4/nsa_doe_hpc_techmeetingreport.pdf). Richard P. Muller and David Mountain. A Report from the NSA-DOE Technical Meeting on High Performance Computing. 
 - [Optimized Effective Potential from a Correlated Wave Function: OEP-GVB](https://pubs.aip.org/aip/jcp/article-abstract/125/5/054101/908943/Optimized-effective-potential-from-a-correlated?redirectedFrom=fulltext). Richard P. Muller and Michael P. Desjarlais. Journal of Chemical Physics. 125, 54101 (2006). 
 - [Computing Approximate Eigenpairs of Symmetric Block Tridiagonal Matrices](https://epubs.siam.org/doi/10.1137/S1064827501399432). Wilfried Gansterer, Robert C. Ward, Richard P. Muller and William A. Goddard, III. SIAM Journal on Scientific Computing, 25, 65 (2003). 
