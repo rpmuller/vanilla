@@ -6,7 +6,7 @@ PageSummary = """\
 High impact leadership in quantum information science, artificial intelligence, and advanced computing for national security."""
 
 NPubs = 74
-HIndex = 34
+HIndex = 36
 HomeURL = "https://rmuller.net"
 ScholarURL = "https://scholar.google.com/citations?user=ihGf4wgAAAAJ"
 LinkedInURL = "https://in.linkedin.com/in/rick-muller-62082a"

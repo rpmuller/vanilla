@@ -59,7 +59,7 @@ BA, cum Laude, Chemistry, 1988
 Visiting Scholar, Chemistry, 1984-1985 
 
 ### Selected Publications
-74 total publications; h-index 34.
+74 total publications; h-index 36.
 
 #### Quantum Information Science
 - [Impact of Incorporation Kinetics on Device Fabrication with Atomic Precision](https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.16.054037). Jeffrey A. Ivie, Quinn Campbell, Justin C. Koepke, Mitchell I. Brickson, Peter A. Schultz, Richard P. Muller, Andrew M. Mounce, Daniel R. Ward, Malcom S. Carroll, Ezra Bussmann, Andrew D. Baczewski, Shashank Misra. Phys. Rev. Applied 16, 054037 (2021). [arXiv:2105.12074](https://arxiv.org/abs/2105.12074)
