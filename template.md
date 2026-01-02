@@ -3,11 +3,11 @@
 {{PageSummary}}
 
 #### Contact:
-- [Homepage](https://rmuller.net)
-- [Google scholar](https://scholar.google.com/citations?user=ihGf4wgAAAAJ)
-- [LinkedIn](https://in.linkedin.com/in/rick-muller-62082a)
-- [Github @rpmuller](http://github.com/rpmuller)
-- [Twitter @rpmuller](ttp://twitter.com/rpmuller)
+- [Homepage]({{HomeURL}})
+- [Google Scholar]({{ScholarURL}})
+- [LinkedIn]({{LinkedInURL}})
+- [Github @rpmuller]({{GithubURL}})
+- [Twitter @rpmuller]({{TwitterURL}})
 
       
 ### Experience
@@ -30,17 +30,17 @@ _{{Summary}}_
 {{NPubs}} total publications; h-index {{HIndex}}.
 
 #### Quantum Information Science
-{{#QuantumPapers}} 
-- [{{Title}}]({{URL}}). {{Authors}}. {{Reference}}. {{#Arxiv}}[arXiv:{{Arxiv}}]({{Arxiv}}){{/Arxiv}}
+{{#QuantumPapers}}
+- [{{Title}}]({{URL}}). {{Authors}}. {{Reference}}. {{#Arxiv}}[arXiv:{{Arxiv}}](https://arxiv.org/abs/{{Arxiv}}){{/Arxiv}}
 {{/QuantumPapers}}
 
 #### Computing and Theory
 {{#TheoryPapers}}
-- [{{Title}}]({{URL}}). {{Authors}}. {{Reference}}. {{#Arxiv}}[arXiv:{{Arxiv}}]({{Arxiv}}){{/Arxiv}}
+- [{{Title}}]({{URL}}). {{Authors}}. {{Reference}}. {{#Arxiv}}[arXiv:{{Arxiv}}](https://arxiv.org/abs/{{Arxiv}}){{/Arxiv}}
 {{/TheoryPapers}}
 
 #### Materials, Chemistry, Energy
 {{#MaterialsPapers}}
-- [{{Title}}]({{URL}}). {{Authors}}. {{Reference}}. {{#Arxiv}}[arXiv:{{Arxiv}}]({{Arxiv}}){{/Arxiv}}
+- [{{Title}}]({{URL}}). {{Authors}}. {{Reference}}. {{#Arxiv}}[arXiv:{{Arxiv}}](https://arxiv.org/abs/{{Arxiv}}){{/Arxiv}}
 {{/MaterialsPapers}}
 

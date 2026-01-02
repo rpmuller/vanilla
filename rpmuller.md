@@ -4,10 +4,10 @@ High impact leadership in quantum information science, artificial intelligence, 
 
 #### Contact:
 - [Homepage](https://rmuller.net)
-- [Google scholar](https://scholar.google.com/citations?user=ihGf4wgAAAAJ)
+- [Google Scholar](https://scholar.google.com/citations?user=ihGf4wgAAAAJ)
 - [LinkedIn](https://in.linkedin.com/in/rick-muller-62082a)
 - [Github @rpmuller](http://github.com/rpmuller)
-- [Twitter @rpmuller](ttp://twitter.com/rpmuller)
+- [Twitter @rpmuller](http://twitter.com/rpmuller)
 
       
 ### Experience
@@ -62,21 +62,15 @@ Visiting Scholar, Chemistry, 1984-1985
 74 total publications; h-index 34.
 
 #### Quantum Information Science
- 
-- [Impact of Incorporation Kinetics on Device Fabrication with Atomic Precision](https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.16.054037). Jeffrey A. Ivie, Quinn Campbell, Justin C. Koepke, Mitchell I. Brickson, Peter A. Schultz, Richard P. Muller, Andrew M. Mounce, Daniel R. Ward, Malcom S. Carroll, Ezra Bussmann, Andrew D. Baczewski, Shashank Misra. Phys. Rev. Applied 16, 054037 (2021). [arXiv:2105.12074](2105.12074)
- 
+- [Impact of Incorporation Kinetics on Device Fabrication with Atomic Precision](https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.16.054037). Jeffrey A. Ivie, Quinn Campbell, Justin C. Koepke, Mitchell I. Brickson, Peter A. Schultz, Richard P. Muller, Andrew M. Mounce, Daniel R. Ward, Malcom S. Carroll, Ezra Bussmann, Andrew D. Baczewski, Shashank Misra. Phys. Rev. Applied 16, 054037 (2021). [arXiv:2105.12074](https://arxiv.org/abs/2105.12074)
 - [Advanced Electronic Structure Calculations for Nanoelectronics](https://link.springer.com/chapter/10.1007/978-3-030-18778-1_18). John K. Gamble, Erik Nielsen, Andrew Baczewski, Jonathan E. Moussa, Xujiao Gao, Andrew G. Salinger, and Richard P. Muller. Springer Series in Materials Science series Computational Materials, Chemistry, and Biochemistry: From Bold Initiatives to the Last Mile (2020). 
- 
-- [The Promise of Quantum Simulation](https://pubs.acs.org/doi/10.1021/acsnano.5b03650). Richard P. Muller and Robin Blume-Kohout. ACS Nano 9, 7738 (2015). [arXiv:1507.06035](1507.06035)
- 
+- [The Promise of Quantum Simulation](https://pubs.acs.org/doi/10.1021/acsnano.5b03650). Richard P. Muller and Robin Blume-Kohout. ACS Nano 9, 7738 (2015). [arXiv:1507.06035](https://arxiv.org/abs/1507.06035)
 - [ASCR Report on Quantum Computing for Science (2015)](https://science.osti.gov/-/media/ascr/pdf/programdocuments/docs/ASCRQuantumReport-final.pdf). Alan Aspuru-Guzik, Wim van Dam, Edward Farhi, Frank Gaitan, Travis Humble, Stephen Jordan, Andrew Landahl, Peter Love, Robert Lucas, Richard Muller, John Preskill, Krysta Svore, Nathan Wiebe, and Carl Williams. . 
- 
-- [QCAD Simulation and Optimization of Semiconductor Quantum Dots](https://pubs.aip.org/aip/jap/article-abstract/114/16/164302/395457/Quantum-computer-aided-design-simulation-and?redirectedFrom=fulltext). X. Gao, E. Nielsen, R. P. Muller, R. W. Young, A. G. Salinger, N. C. Bishop, M. Lilly, M. S. Carroll. Journal of Applied Physics, 114, 164302 (2013). [arXiv:1403.7561](1403.7561)
- 
-- [Coherent Electron Transport by Adiabatic Passage in an Imperfect Donor Chain](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.82.155315). Rajib Rahman, Richard P. Muller, James E. Levy, Malcolm S. Carroll, Gerhard Klimeck, Andrew D. Greentree, Lloyd C. L. Hollenberg. Physical Review B, 82, 155315 (2010). [arXiv:1008.1494](1008.1494)
+- [QCAD Simulation and Optimization of Semiconductor Quantum Dots](https://pubs.aip.org/aip/jap/article-abstract/114/16/164302/395457/Quantum-computer-aided-design-simulation-and?redirectedFrom=fulltext). X. Gao, E. Nielsen, R. P. Muller, R. W. Young, A. G. Salinger, N. C. Bishop, M. Lilly, M. S. Carroll. Journal of Applied Physics, 114, 164302 (2013). [arXiv:1403.7561](https://arxiv.org/abs/1403.7561)
+- [Coherent Electron Transport by Adiabatic Passage in an Imperfect Donor Chain](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.82.155315). Rajib Rahman, Richard P. Muller, James E. Levy, Malcolm S. Carroll, Gerhard Klimeck, Andrew D. Greentree, Lloyd C. L. Hollenberg. Physical Review B, 82, 155315 (2010). [arXiv:1008.1494](https://arxiv.org/abs/1008.1494)
 
 #### Computing and Theory
-- [SymPy: Symbolic Computing in Python](https://peerj.com/articles/cs-103/). Aaron Meurer et al.. PeerJ Computer Science 3:e103 (2017). [arXiv:1502.05589](1502.05589)
+- [SymPy: Symbolic Computing in Python](https://peerj.com/articles/cs-103/). Aaron Meurer et al.. PeerJ Computer Science 3:e103 (2017). [arXiv:1502.05589](https://arxiv.org/abs/1502.05589)
 - [U.S. Leadership in High Performance Computing](https://www.nitrd.gov/nitrdgroups/images/b/b4/nsa_doe_hpc_techmeetingreport.pdf). Richard P. Muller and David Mountain. A Report from the NSA-DOE Technical Meeting on High Performance Computing. 
 - [Optimized Effective Potential from a Correlated Wave Function: OEP-GVB](https://pubs.aip.org/aip/jcp/article-abstract/125/5/054101/908943/Optimized-effective-potential-from-a-correlated?redirectedFrom=fulltext). Richard P. Muller and Michael P. Desjarlais. Journal of Chemical Physics. 125, 54101 (2006). 
 - [Computing Approximate Eigenpairs of Symmetric Block Tridiagonal Matrices](https://epubs.siam.org/doi/10.1137/S1064827501399432). Wilfried Gansterer, Robert C. Ward, Richard P. Muller and William A. Goddard, III. SIAM Journal on Scientific Computing, 25, 65 (2003). 
