@@ -1,0 +1,40 @@
+SSH Key Setup Instructions for mullermail.xyz
+==============================================
+
+Your public key from this computer:
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDghFdW9UaOuXfNYXJKm5btAuOfXM9Fx155EESzGzYR rpmuller@gmail.com
+
+Steps to add this key to the server:
+-------------------------------------
+
+1. SSH into mullermail.xyz with your existing account
+
+2. Add the key to root's authorized_keys file:
+
+   Option A - If you can SSH directly as root with password:
+
+     ssh root@mullermail.xyz
+     echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDghFdW9UaOuXfNYXJKm5btAuOfXM9Fx155EESzGzYR rpmuller@gmail.com" >> ~/.ssh/authorized_keys
+     exit
+
+   Option B - If you SSH as regular user and need sudo:
+
+     ssh youruser@mullermail.xyz
+     echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDghFdW9UaOuXfNYXJKm5btAuOfXM9Fx155EESzGzYR rpmuller@gmail.com" | sudo tee -a /root/.ssh/authorized_keys
+     exit
+
+3. Back on this computer, test the connection:
+
+     ssh root@mullermail.xyz "echo 'Connection successful'"
+
+4. If that works, test deployment:
+
+     make install
+
+Notes:
+------
+- The public key is safe to share - it's meant to be public
+- Make sure /root/.ssh/authorized_keys has correct permissions (600)
+- If the .ssh directory doesn't exist, create it first:
+    sudo mkdir -p /root/.ssh
+    sudo chmod 700 /root/.ssh
