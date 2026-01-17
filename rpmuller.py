@@ -169,6 +169,8 @@ templates = [
     ("template.html", "rpmuller.classic.html"),        # Previous design preserved
     ("template.sidebar.html", "rpmuller.sidebar.html"),
     ("template.right.sidebar.html", "rpmuller.right.sidebar.html"),
+    ("template.concise.html", "rpmuller.concise.html"), # Demo
+    ("template.dark.html", "rpmuller.dark.html"),       # Demo
     ("template.md", "rpmuller.md")
 ]
 
