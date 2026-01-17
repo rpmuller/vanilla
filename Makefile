@@ -1,6 +1,6 @@
 all: build install
 
-build: rpmuller.py template.html template.sidebar.html template.right.sidebar.html
+build: rpmuller.py template.timeline.html template.html
 	uv run rpmuller.py
 
 install:

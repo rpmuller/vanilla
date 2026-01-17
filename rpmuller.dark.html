@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Muller Resume</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=Montserrat:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent: #22d3ee;
+            /* Cyan */
+            --accent-secondary: #c084fc;
+            /* Purple */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-secondary);
+            text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Hero Header */
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 6rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 4rem;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 20px 20px 0 var(--bg-card);
+            filter: sepia(50%) hue-rotate(180deg) saturate(150%);
+            transition: all 0.4s;
+        }
+
+        .profile-img:hover {
+            filter: none;
+            transform: scale(1.02);
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-top: 1.5rem;
+        }
+
+        .social-bar {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-bar a {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .social-bar a:hover {
+            background: rgba(34, 211, 238, 0.1);
+            color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        /* Section Styling */
+        h2 {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.5rem;
+            color: var(--accent-secondary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '>';
+            color: var(--accent);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #334155;
+            margin-left: 20px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .card-meta {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .job-positions {
+            margin-top: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #334155;
+        }
+
+        .position-item {
+            margin-bottom: 1rem;
+        }
+
+        .position-title {
+            font-weight: 600;
+            display: block;
+        }
+
+        .position-span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Publications Table feel */
+        .pub-group {
+            margin-bottom: 3rem;
+        }
+
+        .pub-group h3 {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .pub-row {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: 0.2s;
+            align-items: baseline;
+        }
+
+        .pub-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--accent);
+        }
+
+        .pub-index {
+            font-family: 'Fira Code', monospace;
+            color: #475569;
+            text-align: right;
+        }
+
+        .pub-content a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
+
+        .pub-ref {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .social-bar {
+                justify-content: center;
+            }
+
+            .pub-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .pub-index {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Rick Muller" class="profile-img">
+            </div>
+            <div class="hero-text">
+                <span>Hello, I'm</span>
+                <h1>Rick Muller</h1>
+                <p>High impact leadership in quantum information science, artificial intelligence, and advanced computing for national security.</p>
+                <div class="social-bar">
+                    <a href="https://rmuller.net"><i class="fa fa-home"></i></a>
+                    <a href="https://scholar.google.com/citations?user=ihGf4wgAAAAJ"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://in.linkedin.com/in/rick-muller-62082a"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="http://github.com/rpmuller"><i class="fab fa-github"></i></a>
+                    <a href="http://twitter.com/rpmuller"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>IonQ</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">SVP, Federal Technical Lead</span>
+                            <span class="position-span">// 2025-Present</span>
+                        </div>
+                        <div class="position-item">
+                            <span class="position-title">VP, Quantum Computing Systems</span>
+                            <span class="position-span">// 2025</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Developing IonQ&#x27;s next generation quantum systems to address the world&#x27;s hardest problems.</p>
+                </div>
+                <div class="card">
+                    <h3>Intelligence Advanced Research Projects Activity (IARPA)</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">Director</span>
+                            <span class="position-span">// 2024-2025</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Directed IARPA&#x27;s research portfolio in artificial intelligence, quantum information science, biometrics, image, text, and video recognition and processing, and related technologies to give the US Intelligence Community an overwhelming information advantage.</p>
+                </div>
+                <div class="card">
+                    <h3>Quantum Systems Accelerator (QSA)</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">Director</span>
+                            <span class="position-span">// 2022-2024</span>
+                        </div>
+                        <div class="position-item">
+                            <span class="position-title">Deputy Director</span>
+                            <span class="position-span">// 2020-2022</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Led the Quantum Systems Accelerator, one of five DOE National Quantum Initiative Science Research Centers, to catalyze national leadership in quantum information science to co-design the algorithms, quantum devices, and engineering solutions needed to deliver certified quantum advantage in Department of Energy scientific applications.</p>
+                </div>
+                <div class="card">
+                    <h3>Sandia National Laboratories</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">Senior Manager, Quantum and Advanced Microsystems Group</span>
+                            <span class="position-span">// 2019-2024</span>
+                        </div>
+                        <div class="position-item">
+                            <span class="position-title">Program Manager, Quantum Information Sciences</span>
+                            <span class="position-span">// 2018</span>
+                        </div>
+                        <div class="position-item">
+                            <span class="position-title">Manager, Computational Materials Science</span>
+                            <span class="position-span">// 2017-2018</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Led the Quantum Information Science program at Sandia to develop quantum technologies, testbeds, and centers for national security.</p>
+                </div>
+                <div class="card">
+                    <h3>National Strategic Computing Initiative</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">Senior Staff, Joint Program Office</span>
+                            <span class="position-span">// 2016-2017</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Led the NSCI Joint Program Office and coordinated USG work with DOD, DOE, NSF, OSTP, OMB, NIST, IARPA. Led workshops exploring impact of foreign HPC on national and economic security, and initiated programs developing novel hardware and software paradigms for heterogeneous computing.</p>
+                </div>
+                <div class="card">
+                    <h3>Sandia National Laboratories</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">Distinguished Member of the Technical Staff</span>
+                            <span class="position-span">// 2016-2017</span>
+                        </div>
+                        <div class="position-item">
+                            <span class="position-title">Principal Member of the Technical Staff</span>
+                            <span class="position-span">// 2007-2015</span>
+                        </div>
+                        <div class="position-item">
+                            <span class="position-title">Senior Member of the Technical Staff</span>
+                            <span class="position-span">// 2003-2007</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Deputy director of Sandia Science and Engineering of Quantum Information Sciences Research Challenge. Deputy Project Lead and Modeling Lead, Quantum Information Science and Technology, developing silicon donor and dot qubits. PI for development of QCAD simulation tool for nano- and quantum electronic devices.</p>
+                </div>
+                <div class="card">
+                    <h3>California Institute of Technology</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">Director, Quantum Simulations Technology</span>
+                            <span class="position-span">// 1997-2003</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Directed the Quantum Simulations Technology group at the Caltech Materials and Process Simulation Center, focusing on developing new methods for quantum simulations and multiscale modeling.</p>
+                </div>
+                <div class="card">
+                    <h3>University of Southern California</h3>
+                    <div class="job-positions">
+                        <div class="position-item">
+                            <span class="position-title">Postdoctoral Research Associate</span>
+                            <span class="position-span">// 1994-1997</span>
+                        </div>
+                    </div>
+                    <p style="margin-top:1rem; font-size: 0.95rem;">Postdoctoral research on computational modeling of enzyme catalysis with Nobel Laureate Prof. Arieh Warshel</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="grid-2">
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3>California Institute of Technology</h3>
+                    <span class="card-meta">PhD, Chemistry, 1994</span>
+                    <p>Thesis: Development and implementation of ab initio methods for application to large molecules.</p>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3>Rice University</h3>
+                    <span class="card-meta">BA, cum Laude, Chemistry, 1988</span>
+                    
+                </div>
+                <div class="card" style="border-top: 4px solid var(--accent);">
+                    <h3>Oriel College, University of Oxford</h3>
+                    <span class="card-meta">Visiting Scholar, Chemistry, 1984-1985</span>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <p style="font-family: 'Fira Code', monospace; color: var(--accent);">
+                >> Stats: 74 publications | h-index: 36
+            </p>
+
+            <div class="pub-group">
+                <h3>Quantum Information Science</h3>
+                <div class="pub-list">
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>1</span></div> <!-- Dummy index for style -->
+                        <div class="pub-content">
+                            <a href="https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.16.054037">Impact of Incorporation Kinetics on Device Fabrication with Atomic Precision</a>
+                            <div class="pub-authors">Jeffrey A. Ivie, Quinn Campbell, Justin C. Koepke, Mitchell I. Brickson, Peter A. Schultz, Richard P. Muller, Andrew M. Mounce, Daniel R. Ward, Malcom S. Carroll, Ezra Bussmann, Andrew D. Baczewski, Shashank Misra</div>
+                            <div class="pub-ref">Phys. Rev. Applied 16, 054037 (2021) <span
+                                    style="color:var(--accent-secondary)">[arXiv:2105.12074]</span></div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>1</span></div> <!-- Dummy index for style -->
+                        <div class="pub-content">
+                            <a href="https://link.springer.com/chapter/10.1007/978-3-030-18778-1_18">Advanced Electronic Structure Calculations for Nanoelectronics</a>
+                            <div class="pub-authors">John K. Gamble, Erik Nielsen, Andrew Baczewski, Jonathan E. Moussa, Xujiao Gao, Andrew G. Salinger, and Richard P. Muller</div>
+                            <div class="pub-ref">Springer Series in Materials Science series Computational Materials, Chemistry, and Biochemistry: From Bold Initiatives to the Last Mile (2020) </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>1</span></div> <!-- Dummy index for style -->
+                        <div class="pub-content">
+                            <a href="https://pubs.acs.org/doi/10.1021/acsnano.5b03650">The Promise of Quantum Simulation</a>
+                            <div class="pub-authors">Richard P. Muller and Robin Blume-Kohout</div>
+                            <div class="pub-ref">ACS Nano 9, 7738 (2015) <span
+                                    style="color:var(--accent-secondary)">[arXiv:1507.06035]</span></div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>1</span></div> <!-- Dummy index for style -->
+                        <div class="pub-content">
+                            <a href="https://science.osti.gov/-/media/ascr/pdf/programdocuments/docs/ASCRQuantumReport-final.pdf">ASCR Report on Quantum Computing for Science (2015)</a>
+                            <div class="pub-authors">Alan Aspuru-Guzik, Wim van Dam, Edward Farhi, Frank Gaitan, Travis Humble, Stephen Jordan, Andrew Landahl, Peter Love, Robert Lucas, Richard Muller, John Preskill, Krysta Svore, Nathan Wiebe, and Carl Williams</div>
+                            <div class="pub-ref"> </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>1</span></div> <!-- Dummy index for style -->
+                        <div class="pub-content">
+                            <a href="https://pubs.aip.org/aip/jap/article-abstract/114/16/164302/395457/Quantum-computer-aided-design-simulation-and?redirectedFrom=fulltext">QCAD Simulation and Optimization of Semiconductor Quantum Dots</a>
+                            <div class="pub-authors">X. Gao, E. Nielsen, R. P. Muller, R. W. Young, A. G. Salinger, N. C. Bishop, M. Lilly, M. S. Carroll</div>
+                            <div class="pub-ref">Journal of Applied Physics, 114, 164302 (2013) <span
+                                    style="color:var(--accent-secondary)">[arXiv:1403.7561]</span></div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>1</span></div> <!-- Dummy index for style -->
+                        <div class="pub-content">
+                            <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.82.155315">Coherent Electron Transport by Adiabatic Passage in an Imperfect Donor Chain</a>
+                            <div class="pub-authors">Rajib Rahman, Richard P. Muller, James E. Levy, Malcolm S. Carroll, Gerhard Klimeck, Andrew D. Greentree, Lloyd C. L. Hollenberg</div>
+                            <div class="pub-ref">Physical Review B, 82, 155315 (2010) <span
+                                    style="color:var(--accent-secondary)">[arXiv:1008.1494]</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-group">
+                <h3>Computing and Theory</h3>
+                <div class="pub-list">
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>2</span></div>
+                        <div class="pub-content">
+                            <a href="https://peerj.com/articles/cs-103/">SymPy: Symbolic Computing in Python</a>
+                            <div class="pub-authors">Aaron Meurer et al.</div>
+                            <div class="pub-ref">PeerJ Computer Science 3:e103 (2017) <span
+                                    style="color:var(--accent-secondary)">[arXiv:1502.05589]</span></div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>2</span></div>
+                        <div class="pub-content">
+                            <a href="https://www.nitrd.gov/nitrdgroups/images/b/b4/nsa_doe_hpc_techmeetingreport.pdf">U.S. Leadership in High Performance Computing</a>
+                            <div class="pub-authors">Richard P. Muller and David Mountain</div>
+                            <div class="pub-ref">A Report from the NSA-DOE Technical Meeting on High Performance Computing </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>2</span></div>
+                        <div class="pub-content">
+                            <a href="https://pubs.aip.org/aip/jcp/article-abstract/125/5/054101/908943/Optimized-effective-potential-from-a-correlated?redirectedFrom=fulltext">Optimized Effective Potential from a Correlated Wave Function: OEP-GVB</a>
+                            <div class="pub-authors">Richard P. Muller and Michael P. Desjarlais</div>
+                            <div class="pub-ref">Journal of Chemical Physics. 125, 54101 (2006) </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>2</span></div>
+                        <div class="pub-content">
+                            <a href="https://epubs.siam.org/doi/10.1137/S1064827501399432">Computing Approximate Eigenpairs of Symmetric Block Tridiagonal Matrices</a>
+                            <div class="pub-authors">Wilfried Gansterer, Robert C. Ward, Richard P. Muller and William A. Goddard, III</div>
+                            <div class="pub-ref">SIAM Journal on Scientific Computing, 25, 65 (2003) </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>2</span></div>
+                        <div class="pub-content">
+                            <a href="https://pubs.acs.org/doi/10.1021/j100049a009">Ab Initio Calculations of Free Energy Barriers for Chemical Reactions in Solution</a>
+                            <div class="pub-authors">Richard P. Muller and Arieh Warshel</div>
+                            <div class="pub-ref">Journal of Physical Chemistry, 99 (49), 17516 (1995) </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-group">
+                <h3>Materials, Chemistry, Energy</h3>
+                <div class="pub-list">
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>3</span></div>
+                        <div class="pub-content">
+                            <a href="https://iopscience.iop.org/article/10.1149/MA2011-02/17/1469">Influence of overcharge and over-discharge on the impedance response of LiCoO2|C batteries</a>
+                            <div class="pub-authors">Salim Erol, Mark E. Orazem and Richard P. Muller</div>
+                            <div class="pub-ref">Journal of Power Sources, 270, 92 (2014) </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>3</span></div>
+                        <div class="pub-content">
+                            <a href="https://www.electrochem.org/dl/interface/sum/sum12/sum12_p057_060.pdf">Simulation of Abuse Behavior of Lithium-Ion Batteries</a>
+                            <div class="pub-authors">Robert Spotnitz and Richard P. Muller</div>
+                            <div class="pub-ref">The Electrochemical Society Interface, 21, 54 (2012) </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>3</span></div>
+                        <div class="pub-content">
+                            <a href="https://www.publish.csiro.au/CH/CH03307">Meccano on the Nanoscale: A Blueprint for Making the World&#x27;s Smallest Devices</a>
+                            <div class="pub-authors">Amar H. Flood, Robert J. A. Ramirez, Wei-Qiao Deng, Richard P. Muller, William A. Goddard, III and J. Frasier Stoddard</div>
+                            <div class="pub-ref">Australian Journal of Chemistry, 57, 301 (2004) </div>
+                        </div>
+                    </div>
+                    <div class="pub-row">
+                        <div class="pub-index">0x0<span>3</span></div>
+                        <div class="pub-content">
+                            <a href="https://link.springer.com/article/10.1023/A:1024872320512">Quantum Mechanical-Rapid Prototyping Applied to Methane Activation</a>
+                            <div class="pub-authors">Richard P. Muller, Dean M. Philipp and William A. Goddard, III</div>
+                            <div class="pub-ref">Topics in Catalysis, 23, 81 (2003) </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

@@ -163,13 +163,18 @@ MaterialsPapers = [
     },
 ]
 
-for template in ["template.html",
-                 "template.sidebar.html",
-                 "template.right.sidebar.html",
-                 "template.md"
-                 ]:
-    fname = template.replace("template", "rpmuller")
-    with open(template) as f:
+# Template configuration: (Input Template, Output File)
+templates = [
+    ("template.timeline.html", "rpmuller.html"),       # New main design
+    ("template.html", "rpmuller.classic.html"),        # Previous design preserved
+    ("template.sidebar.html", "rpmuller.sidebar.html"),
+    ("template.right.sidebar.html", "rpmuller.right.sidebar.html"),
+    ("template.md", "rpmuller.md")
+]
+
+for template_file, output_file in templates:
+    with open(template_file) as f:
         content = render(f.read(), locals())
-    with open(fname, "w") as f:
+    with open(output_file, "w") as f:
         f.write(content)
+    print(f"Generated {output_file} from {template_file}")
